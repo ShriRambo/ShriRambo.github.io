@@ -8,7 +8,7 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet" href="./Resources/myCSS.css">
 <style>
-html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
+html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", 'Times New Roman'}
 </style>
 <body class="w3-light-grey">
 <!-- Page Container -->
@@ -21,13 +21,16 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
 
  <!-- Navbar -->
  <div class="w3-row-padding" style="margin-top:-10px; margin-bottom:2px">
+    
+  
     <div class="w3-bar w3-theme-d2 w3-left-align">
-     <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-hover-white w3-theme-d2" href="javascript:void(0);" onclick="openNav()"><i class="fa fa-bars"></i></a>
-     <a href="#" class="w3-bar-item w3-button w3-teal"><i class="fa fa-home "></i></a>
-     <a href="http://www.linkedin.com/in/shriram-ashirgade" class="w3-bar-item w3-button w3-hide-small w3-hover-white"><i class="fa fa-linkedin "></i></a>
-     <a  href="./Gallery/gallery.html" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Gallery</a>
-     <a href="https://shrirambo.github.io/p5Gallery/index.html" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Generative Art</a>
-
+      <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-hover-white w3-theme-d2" href="javascript:void(0);" onclick="openNav()"><i class="fa fa-bars"></i></a>
+      <a href="#" class="w3-bar-item w3-button w3-teal"><i class="fa fa-home "></i></a>
+      <a href="http://www.linkedin.com/in/shriram-ashirgade" class="w3-bar-item w3-button w3-hide-small w3-hover-white"><i class="fa fa-linkedin "></i></a>
+      <a  href="./Gallery/gallery.html" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Gallery</a>
+      <a href="https://shrirambo.github.io/p5Gallery/index.html" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Generative Art</a>
+      <a href="./Work-in-progress/inProgress.html"    class="w3-bar-item w3-button w3-hide-small w3-hover-white w3-right-align">Blog</a>
+      <a onclick="openContactForm()"  class="w3-bar-item w3-button w3-hide-small w3-hover-white w3-right-align">Contact</a>
     <!-- Drop Down Menu
     <div class="w3-dropdown-hover w3-hide-small">
       <button class="w3-button" title="Notifications">Dropdown <i class="fa fa-caret-down"></i></button>     
@@ -38,19 +41,28 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
       </div>
     </div>
     -->
-
-
     </div>
    
      <!-- Navbar on small screens -->
      <div id="navDemo" class="w3-bar-block w3-theme-d2 w3-hide w3-hide-large w3-hide-medium">
         <a href="http://www.linkedin.com/in/shriram-ashirgade"class="w3-bar-item w3-button"><i class="fa fa-linkedin "></i></a>
-       <a  href="./Gallery/gallery.html" class="w3-bar-item w3-button">Gallery</a>
-       <a href="https://shrirambo.github.io/p5Gallery/index.html" class="w3-bar-item w3-button">Generative Art</a>
+        <a  href="./Gallery/gallery.html" class="w3-bar-item w3-button">Gallery</a>
+        <a href="https://shrirambo.github.io/p5Gallery/index.html" class="w3-bar-item w3-button">Generative Art</a>
+        <a href="./Work-in-progress/inProgress.html" class="w3-bar-item w3-button ">Blog</a>
+        <a onclick="openContactForm()"  class="w3-bar-item w3-button ">Contact</a>
      </div>
    </div>
   
-  
+  <!-- Modal contact form -->
+      <!-- Modal for full size contact form-->
+      <div id="modal01" class="modal" style="padding-top:10" onclick="this.style.display='none'">
+        <div class="w3-animate-zoom w3-center w3-transparent " style="opacity: 50%;">
+          <iframe align='center'
+            src="https://docs.google.com/forms/d/e/1FAIpQLSdYX1GDz7wdg30oHfXyw28TYD4_HTOhmPU1JPbg2_WGoRFTsw/viewform?embedded=true&hl=en"
+            height="700" width="640" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+        </div>
+      </div>
+
 
     <!-- Left Column -->
     <div class="w3-third">
@@ -224,13 +236,15 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
 </div>
 
 <footer class="w3-container w3-center w3-margin-top" style="background-color:#009688;">
-  <!--
-    <p>Contact me !</p>
-  <i class="fa fa-instagram w3-hover-opacity">.</i>
-  <a ><i class="fa fa-linkedin w3-hover-opacity"></i></a>
-  <i class="fa fa-github w3-hover-opacity"></i>
-  -->
-  <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
+ <i class="fa fa-facebook-official w3-hover-opacity"
+   onclick="window.location.href ='https://www.facebook.com/sashirgade'"></i>
+ <i class="fa fa-instagram w3-hover-opacity"
+   onclick="window.location.href ='https://www.instagram.com/shri_rambo/'"></i>
+ <i class="fa fa-linkedin w3-hover-opacity"
+   onclick="window.location.href ='http://www.linkedin.com/in/shriram-ashirgade'"></i>
+ <i class="fa fa-github w3-hover-opacity" onclick="window.location.href ='https://github.com/shrirambo'"></i>
+ <p class="w3-medium">Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank"
+     class="w3-hover-text-green">w3.css</a></p>
 </footer>
 
 
@@ -256,6 +270,13 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
       } else { 
         x.className = x.className.replace(" w3-show", "");
       }
+    }
+
+    // Modal contact form
+    function openContactForm() {
+    document.getElementById("modal01").style.display = "block";
+    //var captionText = document.getElementById("caption");
+    //captionText.innerHTML = element.alt;
     }
     </script>
 
