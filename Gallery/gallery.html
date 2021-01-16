@@ -5,13 +5,15 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+<link rel="stylesheet" href="./css/stylesheet.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
 <style>
 body,h1 {font-family: "Montserrat", sans-serif}
 img {margin-bottom: -7px}
 .w3-row-padding img {margin-bottom: 12px}
 </style>
-<body>
+<body onresize="setCurrentCard()" onload="setCurrentCard()">
 
 <!-- Sidebar -->
 <nav class="w3-sidebar w3-black w3-animate-top w3-xxlarge" style="display:none;padding-top:150px" id="mySidebar">
@@ -26,7 +28,7 @@ img {margin-bottom: -7px}
 </nav>
 
 <!-- !PAGE CONTENT! -->
-<div class="w3-content" style="max-width:1500px">
+<div class="w3-content" style="max-width:1000px">
 
     <!-- Header -->
     <div class="w3-opacity">
@@ -39,42 +41,101 @@ img {margin-bottom: -7px}
     </div>
 
     <!-- Photo Grid -->
-    <div class="w3-row-padding" id="myGrid" style="margin-bottom:128px">
+    <div class="w3-row" id="myGrid" style="margin-bottom:128px">
         <div class="w3-third">
-            <img class="w3-hover-shadow"   src="./Resources/Apple.jpg"       style="width:100%" onclick="onClick(this)" alt="Apple">
-            <img class="w3-hover-shadow"   src="./Resources/Lighthouse.jpg"  style="width:100%" onclick="onClick(this)" alt="Lighthouse">
-            <img class="w3-hover-shadow"   src="./Resources/adpDancer.jpg"   style="width:100%" onclick="onClick(this)" alt="Charcoal Dancer">
-            <img class="w3-hover-shadow"   src="./Resources/eye1.jpg"        style="width:100%" onclick="onClick(this)" alt="Eyes">
-            <img class="w3-hover-shadow"   src="./Resources/dragon.jpg"      style="width:100%" onclick="onClick(this)" alt="Origami Dragon" >
-            <img class="w3-hover-shadow"   src="./Resources/wondering.jpg"   style="width:100%" onclick="onClick(this)" alt="I wonder">
+          
+            
+            <div class=" metaContainer"><div class="container" >
+            <img class="card" loading="lazy"  src="./img/Apple.jpg"    style="width:100%"     alt="Apple">
+            </div></div>
+            
+
+            <div class=" metaContainer"><div class="container" >
+            <img class="card" loading="lazy"  src="./img/Lighthouse.jpg"  style="width:100%"   alt="Lighthouse">
+            </div></div>
+
+            <div class=" metaContainer"><div class="container" >
+            <img class="card" loading="lazy" src="./img/adpDancer.jpg"   style="width:100%"   alt="Charcoal Dancer">
+            </div></div>
+
+            <div class=" metaContainer"><div class="container" >
+            <img class="card"  loading="lazy" src="./img/eye1.jpg"        style="width:100%"   alt="Eyes">
+            </div></div>
+
+            <div class=" metaContainer"><div class="container" >
+            <img class="card" loading="lazy" src="./img/dragon.jpg"      style="width:100%"   alt="Origami Dragon" >
+            </div></div>
+
+            <div class=" metaContainer"><div class="container" >
+            <img class="card"  loading="lazy" src="./img/wondering.jpg"   style="width:100%"   alt="I wonder">
+            </div></div>
+
+            
+        </div>
+
+
+
+        <div class="w3-third">
+
+          <div class=" metaContainer"><div class="container" >
+          <img class="card"    loading="lazy"  src="./img/miniBoat.jpg"  style="width:100%"    alt="Boat">
+          </div></div>
+
+          <div class=" metaContainer"><div class="container" >
+          <img class="card"     loading="lazy"  src="./img/racer.jpg"     style="width:100%"    alt="Racer">
+          </div></div>
+
+          <div class=" metaContainer"><div class="container" >
+          <img class="card"    loading="lazy"   src="./img/dancer.jpg"    style="width:100%"    alt="Dancer">
+          </div></div>
+
+          <div class=" metaContainer"><div class="container" >
+          <img class="card"    loading="lazy"   src="./img/allEyes.jpg"   style="width:100%"    alt="Eyes">
+          </div></div>
+
+          <div class=" metaContainer"><div class="container" >
+          <img class="card"    loading="lazy"   src="./img/fish.jpg"      style="width:100%"    alt="Fish">
+          </div></div>
+
+          <div class=" metaContainer"><div class="container" >
+          <img class="card"     loading="lazy"  src="./img/pen.PNG"       style="width:100%"    alt="Scribble art">
+          </div></div>
+
         </div>
 
         <div class="w3-third">
-            <img class="w3-hover-shadow"  src="./Resources/miniBoat.jpg"  style="width:100%"  onclick="onClick(this)" alt="Boat">
-            <img class="w3-hover-shadow"  src="./Resources/racer.jpg"     style="width:100%"  onclick="onClick(this)" alt="Racer">
-            <img class="w3-hover-shadow"  src="./Resources/dancer.jpg"    style="width:100%"  onclick="onClick(this)" alt="Dancer">
-            <img class="w3-hover-shadow"  src="./Resources/allEyes.jpg"   style="width:100%"  onclick="onClick(this)" alt="Eyes">
-            <img class="w3-hover-shadow"  src="./Resources/fish.jpg"      style="width:100%"  onclick="onClick(this)" alt="Fish">
-            <img class="w3-hover-shadow"  src="./Resources/pen.PNG"       style="width:100%"  onclick="onClick(this)" alt="Scribble art">
-        </div>
 
-        <div class="w3-third">
-            <img class="w3-hover-shadow"   src="./Resources/charcoal.jpg"   style="width:100%"  onclick="onClick(this)" alt="Charcoal">
-            <img class="w3-hover-shadow"   src="./Resources/forsaken.jpg"   style="width:100%"  onclick="onClick(this)" alt="Charcoal on newspaper">
-            <img class="w3-hover-shadow"   src="./Resources/ironman.jpg"    style="width:100%"  onclick="onClick(this)" alt="Ironman">
-            <img class="w3-hover-shadow"   src="./Resources/audiPanel.jpg"  style="width:100%"  onclick="onClick(this)" alt="Panel">
-            <img class="w3-hover-shadow"   src="./Resources/eyes2.jpg"      style="width:100%"  onclick="onClick(this)" alt="Eyes">
-            <img class="w3-hover-shadow"   src="./Resources/spiralGirl.jpg" style="width:100%"  onclick="onClick(this)" alt="Spiral Girl">
-        </div>
-    </div>
+          <div class=" metaContainer"><div class="container" >
+          <img class="card"     loading="lazy"  src="./img/charcoal.jpg"   style="width:100%"    alt="Charcoal">
+          </div></div>
+            
 
-  <!-- Modal for full size images on click-->
-  <div id="modal01" class="w3-modal w3-black" style="padding-top:0" onclick="this.style.display='none'">
-    <span class="w3-button w3-black w3-xlarge w3-display-topright">×</span>
-    <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64" >
-        <img id="img01" class="w3-image" style="width:80%; position: center;">
-        <!--<p id="caption"></p>-->
-    </div>
+          <div class=" metaContainer"><div class="container" >
+          <img class="card"   loading="lazy"  src="./img/forsaken.jpg"   style="width:100%"    alt="Charcoal on newspaper">
+          </div></div>
+          
+
+          <div class=" metaContainer"><div class="container" >
+          <img class="card"  loading="lazy"  src="./img/ironman.jpg"    style="width:100%"    alt="Ironman">
+          </div></div>
+          
+
+          <div class=" metaContainer"><div class="container" >
+          <img class="card"   loading="lazy" src="./img/audiPanel.jpg"  style="width:100%"    alt="Panel">
+          </div></div>
+          
+
+          <div class=" metaContainer"><div class="container" >
+          <img class="card"  loading="lazy"  src="./img/eyes2.jpg"      style="width:100%"    alt="Eyes">
+          </div></div>
+          
+
+          <div class=" metaContainer"><div class="container" >
+          <img class="card"  loading="lazy"  src="./img/spiralGirl.jpg" style="width:100%"    alt="Spiral Girl">
+          </div></div>
+            
+
+        </div>
     </div>
 
 <!-- End Page Content -->
@@ -91,35 +152,21 @@ img {margin-bottom: -7px}
   <p class="w3-medium">Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank" class="w3-hover-text-green">w3.css</a></p>
 </footer>
  
+<script src="./js/animate.js"></script>
+
 <script>
-// Toggle grid padding
-function myFunction() {
-  var x = document.getElementById("myGrid");
-  if (x.className === "w3-row") {
-    x.className = "w3-row-padding";
-  } else { 
-    x.className = x.className.replace("w3-row-padding", "w3-row");
-  }
-}
 
 // Open and close sidebar
 function w3_open() {
   document.getElementById("mySidebar").style.width = "100%";
   document.getElementById("mySidebar").style.display = "block";
+  document.getElementById("mySidebar").style.zIndex = "999";
 }
 
 function w3_close() {
   document.getElementById("mySidebar").style.display = "none";
 }
 
-// Modal Image Gallery
-function onClick(element) {
-    console.log("Image clicked")
-  document.getElementById("img01").src = element.src;
-  document.getElementById("modal01").style.display = "block";
-  //var captionText = document.getElementById("caption");
-  //captionText.innerHTML = element.alt;
-}
 
 
 </script>
