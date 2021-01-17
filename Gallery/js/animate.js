@@ -5,10 +5,16 @@ window.onbeforeunload = function () {
 
 
 function addAnimListner(card){
-    cont = card.parentElement
-    let rec = cont.getBoundingClientRect();
-    let ccent = {x: rec.left + 0.5*rec.width, y: rec.top + 0.5*rec.height};
-    addAnimationActions(cont , card, ccent)
+    if(card.complete){
+        cont = card.parentElement
+        let rec = cont.getBoundingClientRect();
+        let ccent = {x: rec.left + 0.5*rec.width, y: rec.top + 0.5*rec.height};
+        addAnimationActions(cont , card, ccent)
+    }
+    else{
+        setTimeout(function(){addAnimListner(card);}, 5000 )
+    }
+    
 
 }
 
