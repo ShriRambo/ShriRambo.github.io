@@ -1,20 +1,30 @@
 //Movement animation
 window.onbeforeunload = function () {
     window.scrollTo(0, 0);
-  }
+}
 
-function setCurrentCard(){
 
-    for (let cont of document.querySelectorAll(".container")){
-        let rec = cont.getBoundingClientRect();
-        let ccent = {x: rec.left + 0.5*rec.width, y: rec.top + 0.5*rec.height};
-        let card = cont.children[0]
-
-        addAnimationActions(cont , card, ccent)
-    }
-    
+function addAnimListner(card){
+    cont = card.parentElement
+    let rec = cont.getBoundingClientRect();
+    let ccent = {x: rec.left + 0.5*rec.width, y: rec.top + 0.5*rec.height};
+    addAnimationActions(cont , card, ccent)
 
 }
+
+// function setCurrentCard(){
+
+//     // for (let cont of document.querySelectorAll(".container")){
+        
+//     //     let rec = cont.getBoundingClientRect();
+//     //     let ccent = {x: rec.left + 0.5*rec.width, y: rec.top + 0.5*rec.height};
+//     //     let card = cont.children[0]
+
+//     //     addAnimationActions(cont , card, ccent)
+//     // }
+    
+
+// }
 
 
 function addAnimationActions(container, card, ccent){
@@ -46,3 +56,4 @@ function addAnimationActions(container, card, ccent){
 }
 
 
+// Todo, add event listner on image load

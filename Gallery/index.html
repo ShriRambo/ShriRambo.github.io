@@ -8,12 +8,15 @@
 <link rel="stylesheet" href="./css/stylesheet.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
+<script src="./js/animate.js"></script>
+
 <style>
 body,h1 {font-family: "Montserrat", sans-serif}
 img {margin-bottom: -7px}
 .w3-row-padding img {margin-bottom: 12px}
 </style>
-<body onresize="setCurrentCard()" onload="setCurrentCard()">
+<!-- onresize="setCurrentCard()" onload="setCurrentCard()" -->
+<body >
 
 <!-- Sidebar -->
 <nav class="w3-sidebar w3-black w3-animate-top w3-xxlarge" style="display:none;padding-top:150px" id="mySidebar">
@@ -46,28 +49,28 @@ img {margin-bottom: -7px}
           
             
             <div class=" metaContainer"><div class="container" >
-            <img class="card" loading="lazy"  src="./img/Apple.jpg"    style="width:100%"     alt="Apple">
+            <img class="card" loading="lazy"  src="./img/Apple.jpg"    style="width:100%"     alt="Apple"  onload="addAnimListner(this)">
             </div></div>
             
 
             <div class=" metaContainer"><div class="container" >
-            <img class="card" loading="lazy"  src="./img/Lighthouse.jpg"  style="width:100%"   alt="Lighthouse">
+            <img class="card" loading="lazy"  src="./img/Lighthouse.jpg"  style="width:100%"   alt="Lighthouse"  onload="addAnimListner(this)">
             </div></div>
 
             <div class=" metaContainer"><div class="container" >
-            <img class="card" loading="lazy" src="./img/adpDancer.jpg"   style="width:100%"   alt="Charcoal Dancer">
+            <img class="card" loading="lazy" src="./img/adpDancer.jpg"   style="width:100%"   alt="Charcoal Dancer"  onload="addAnimListner(this)">
             </div></div>
 
             <div class=" metaContainer"><div class="container" >
-            <img class="card"  loading="lazy" src="./img/eye1.jpg"        style="width:100%"   alt="Eyes">
+            <img class="card"  loading="lazy" src="./img/eye1.jpg"        style="width:100%"   alt="Eyes"  onload="addAnimListner(this)">
             </div></div>
 
             <div class=" metaContainer"><div class="container" >
-            <img class="card" loading="lazy" src="./img/dragon.jpg"      style="width:100%"   alt="Origami Dragon" >
+            <img class="card" loading="lazy" src="./img/dragon.jpg"      style="width:100%"   alt="Origami Dragon"   onload="addAnimListner(this)">
             </div></div>
 
             <div class=" metaContainer"><div class="container" >
-            <img class="card"  loading="lazy" src="./img/wondering.jpg"   style="width:100%"   alt="I wonder">
+            <img class="card"  loading="lazy" src="./img/wondering.jpg"   style="width:100%"   alt="I wonder"  onload="addAnimListner(this)">
             </div></div>
 
             
@@ -78,27 +81,27 @@ img {margin-bottom: -7px}
         <div class="w3-third">
 
           <div class=" metaContainer"><div class="container" >
-          <img class="card"    loading="lazy"  src="./img/miniBoat.jpg"  style="width:100%"    alt="Boat">
+          <img class="card"    loading="lazy"  src="./img/miniBoat.jpg"  style="width:100%"    alt="Boat"  onload="addAnimListner(this)">
           </div></div>
 
           <div class=" metaContainer"><div class="container" >
-          <img class="card"     loading="lazy"  src="./img/racer.jpg"     style="width:100%"    alt="Racer">
+          <img class="card"     loading="lazy"  src="./img/racer.jpg"     style="width:100%"    alt="Racer"  onload="addAnimListner(this)">
           </div></div>
 
           <div class=" metaContainer"><div class="container" >
-          <img class="card"    loading="lazy"   src="./img/dancer.jpg"    style="width:100%"    alt="Dancer">
+          <img class="card"    loading="lazy"   src="./img/dancer.jpg"    style="width:100%"    alt="Dancer"  onload="addAnimListner(this)">
           </div></div>
 
           <div class=" metaContainer"><div class="container" >
-          <img class="card"    loading="lazy"   src="./img/allEyes.jpg"   style="width:100%"    alt="Eyes">
+          <img class="card"    loading="lazy"   src="./img/allEyes.jpg"   style="width:100%"    alt="Eyes"  onload="addAnimListner(this)">
           </div></div>
 
           <div class=" metaContainer"><div class="container" >
-          <img class="card"    loading="lazy"   src="./img/fish.jpg"      style="width:100%"    alt="Fish">
+          <img class="card"    loading="lazy"   src="./img/fish.jpg"      style="width:100%"    alt="Fish"  onload="addAnimListner(this)">
           </div></div>
 
           <div class=" metaContainer"><div class="container" >
-          <img class="card"     loading="lazy"  src="./img/pen.PNG"       style="width:100%"    alt="Scribble art">
+          <img class="card"     loading="lazy"  src="./img/pen.PNG"       style="width:100%"    alt="Scribble art"  onload="addAnimListner(this)">
           </div></div>
 
         </div>
@@ -106,32 +109,32 @@ img {margin-bottom: -7px}
         <div class="w3-third">
 
           <div class=" metaContainer"><div class="container" >
-          <img class="card"     loading="lazy"  src="./img/charcoal.jpg"   style="width:100%"    alt="Charcoal">
+          <img class="card"     loading="lazy"  src="./img/charcoal.jpg"   style="width:100%"    alt="Charcoal"  onload="addAnimListner(this)">
           </div></div>
             
 
           <div class=" metaContainer"><div class="container" >
-          <img class="card"   loading="lazy"  src="./img/forsaken.jpg"   style="width:100%"    alt="Charcoal on newspaper">
+          <img class="card"   loading="lazy"  src="./img/forsaken.jpg"   style="width:100%"    alt="Charcoal on newspaper"  onload="addAnimListner(this)">
           </div></div>
           
 
           <div class=" metaContainer"><div class="container" >
-          <img class="card"  loading="lazy"  src="./img/ironman.jpg"    style="width:100%"    alt="Ironman">
+          <img class="card"  loading="lazy"  src="./img/ironman.jpg"    style="width:100%"    alt="Ironman"  onload="addAnimListner(this)">
           </div></div>
           
 
           <div class=" metaContainer"><div class="container" >
-          <img class="card"   loading="lazy" src="./img/audiPanel.jpg"  style="width:100%"    alt="Panel">
+          <img class="card"   loading="lazy" src="./img/audiPanel.jpg"  style="width:100%"    alt="Panel"  onload="addAnimListner(this)">
           </div></div>
           
 
           <div class=" metaContainer"><div class="container" >
-          <img class="card"  loading="lazy"  src="./img/eyes2.jpg"      style="width:100%"    alt="Eyes">
+          <img class="card"  loading="lazy"  src="./img/eyes2.jpg"      style="width:100%"    alt="Eyes"  onload="addAnimListner(this)">
           </div></div>
           
 
           <div class=" metaContainer"><div class="container" >
-          <img class="card"  loading="lazy"  src="./img/spiralGirl.jpg" style="width:100%"    alt="Spiral Girl">
+          <img class="card"  loading="lazy"  src="./img/spiralGirl.jpg" style="width:100%"    alt="Spiral Girl"  onload="addAnimListner(this)">
           </div></div>
             
 
@@ -152,7 +155,7 @@ img {margin-bottom: -7px}
   <p class="w3-medium">Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank" class="w3-hover-text-green">w3.css</a></p>
 </footer>
  
-<script src="./js/animate.js"></script>
+
 
 <script>
 
